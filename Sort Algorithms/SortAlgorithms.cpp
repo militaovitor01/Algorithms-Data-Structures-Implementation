@@ -54,16 +54,6 @@ void SortAlgorithms::SelectionSort(std::vector<int> &array){
     printArray(array);
 }
 
-void SortAlgorithms::InsertionSort(std::vector<int>& array){
-    int n = array.size();
-    
-    for(int i = 0; i < n; i++){
-        int sorted = i;
-
-    }
-
-}
-
 void SortAlgorithms::BubbleSort(std::vector<int>& array){
     int n = array.size();
     bool swapped;
@@ -83,5 +73,15 @@ void SortAlgorithms::BubbleSort(std::vector<int>& array){
         if (!swapped) break;
     }
 
+
+}
+
+void SortAlgorithms::InsertionSort(std::vector<int>& array){
+    int n = array.size();
+    
+    for(int i = 0; i < n; i++){
+        int sorted = i;
+
+    }
 
 }
