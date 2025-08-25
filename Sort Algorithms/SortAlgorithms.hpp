@@ -17,5 +17,7 @@ class SortAlgorithms {
         
         // Sort Methods
         void SelectionSort(std::vector<int>& array);
+        void InsertionSort(std::vector<int>& array);
+        void BubbleSort(std::vector<int>& array);
 
 };

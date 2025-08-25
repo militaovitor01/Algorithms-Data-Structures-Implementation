@@ -6,13 +6,20 @@ using namespace std;
 
 int main(){
     vector<int> nums = {64, 25, 12, 22, 11};
-    SortAlgorithms sortAlgorithm(nums);
-
+    vector<int> nums2 = {64, 25, 12, 22, 11};
+    SortAlgorithms sortAlgorithmSelection(nums);
+    
     cout <<"Array padrao: ";
-    sortAlgorithm.printArray(nums);
+    sortAlgorithmSelection.printArray(nums);
 
     cout <<"Array ordenado por Selecao: " << endl;
-    sortAlgorithm.SelectionSort(nums);
+    sortAlgorithmSelection.SelectionSort(nums);
+
+    cout << endl;
+
+    SortAlgorithms sortAlgorithmBubble(nums2);
+    cout <<"Array ordenado por Bubble: " << endl;
+    sortAlgorithmBubble.BubbleSort(nums2);
 
     cout << endl;
 

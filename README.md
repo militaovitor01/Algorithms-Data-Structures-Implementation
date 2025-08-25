@@ -10,6 +10,7 @@ This project provides an implementation of sorting algorithms in C++ within a cl
 ## Implemented Algorithms
 
 
+
 ### Selection Sort
 Sorts an array by repeatedly finding the minimum element from the unsorted part and moving it to the beginning.
 
@@ -20,19 +21,47 @@ Sorts an array by repeatedly finding the minimum element from the unsorted part 
 
 **Implementation:**
 ```cpp
-int SortAlgorithms::SelectionSort(std::vector<int>& array) {
+void SortAlgorithms::SelectionSort(std::vector<int> &array){
     int n = array.size();
     for (int i = 0; i < n - 1; i++){
         int minIndex = i;
-        // Find the minimum element in the unsorted part
-        for(int j = i + 1; j < n; j++) {
-            if(array[j] < array[i]){
+        for (int j = i + 1; j < n; j++){
+            if (array[j] < array[minIndex]){
                 minIndex = j;
             }
         }
-        // Swap the found minimum element with the first element
         Swap(array[i], array[minIndex]);
+        // Optional: print step by step
     }
+    printArray(array);
+}
+```
+
+### Bubble Sort
+Sorts an array by repeatedly stepping through the list, comparing adjacent elements and swapping them if they are in the wrong order. The process is repeated until the array is sorted.
+
+**Complexity:**
+- **Best Case:** O(n) (when the array is already sorted)
+- **Worst Case:** O(n²) (when the array is sorted in the opposite way)
+- **Space Complexity:** O(1) (in-place)
+
+**Implementation:**
+```cpp
+void SortAlgorithms::BubbleSort(std::vector<int>& array){
+    int n = array.size();
+    bool swapped;
+    for(int i = 0; i < n - 1; i++){
+        swapped = false;
+        for(int j = 0; j < n - i - 1; j++){
+            if(array[j] > array[j + 1]){
+                Swap(array[j], array[j + 1]);
+                swapped = true;
+            }
+        }
+        // Optional: print step by step
+        if (!swapped) break;
+    }
+    printArray(array);
 }
 ```
 

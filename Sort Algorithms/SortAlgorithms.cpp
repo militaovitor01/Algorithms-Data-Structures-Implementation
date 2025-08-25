@@ -53,3 +53,35 @@ void SortAlgorithms::SelectionSort(std::vector<int> &array){
 
     printArray(array);
 }
+
+void SortAlgorithms::InsertionSort(std::vector<int>& array){
+    int n = array.size();
+    
+    for(int i = 0; i < n; i++){
+        int sorted = i;
+
+    }
+
+}
+
+void SortAlgorithms::BubbleSort(std::vector<int>& array){
+    int n = array.size();
+    bool swapped;
+
+    for(int i = 0; i < n - 1; i++){
+        for(int j = 0; j < n - i - 1; j++){
+            if(array[j] > array[j + 1]){
+                Swap(array[j], array[j + 1]);
+                swapped = true;
+            }
+        }
+
+        // Passo a passo das trocas
+        std::cout << "Iteracao " << i + 1 << ": ";
+        printArray(array);
+
+        if (!swapped) break;
+    }
+
+
+}
