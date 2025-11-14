@@ -85,3 +85,25 @@ void SortAlgorithms::InsertionSort(std::vector<int>& array){
     }
 
 }
+
+void SortAlgorithms::Merge(std::vector<int>& array, left, mid, right){
+
+}
+
+void SortAlgorithms::MergeSort(std::vector<int>& array, left, right) {
+    // Verify if it's already sorted
+    if(left >= right){
+        return;
+    }
+
+    // Define the middle of subarrays
+    int mid = left + (right - left) / 2;
+
+    // Divide the sorting and run them simultaneously
+    MergeSort(array, left, mid);
+    MergeSort(array, mid + 1, right);
+
+    // Merge the results
+    Merge();
+
+}
