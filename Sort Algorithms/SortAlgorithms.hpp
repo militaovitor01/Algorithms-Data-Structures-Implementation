@@ -19,6 +19,6 @@ class SortAlgorithms {
         void SelectionSort(std::vector<int>& array);
         void BubbleSort(std::vector<int>& array);
         void InsertionSort(std::vector<int>& array);
-        void Merge(std::vector<int>& array, left, mid, right);
-        void MergeSort(std::vector<int>& array, left, right);
+        void Merge(std::vector<int>& array, int left, int mid, int right);
+        void MergeSort(std::vector<int>& array, int left, int right);
 };

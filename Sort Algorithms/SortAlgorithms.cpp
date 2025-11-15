@@ -86,11 +86,11 @@ void SortAlgorithms::InsertionSort(std::vector<int>& array){
 
 }
 
-void SortAlgorithms::Merge(std::vector<int>& array, left, mid, right){
+void SortAlgorithms::Merge(std::vector<int>& array, int left, int mid, int right){
 
 }
 
-void SortAlgorithms::MergeSort(std::vector<int>& array, left, right) {
+void SortAlgorithms::MergeSort(std::vector<int>& array, int left, int right) {
     // Verify if it's already sorted
     if(left >= right){
         return;
@@ -104,6 +104,5 @@ void SortAlgorithms::MergeSort(std::vector<int>& array, left, right) {
     MergeSort(array, mid + 1, right);
 
     // Merge the results
-    Merge();
-
+    Merge(array, left, mid, right);
 }
